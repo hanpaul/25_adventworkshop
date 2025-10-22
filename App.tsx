@@ -77,7 +77,8 @@ const CheckIcon = ({ className }: { className?: string }) => (
 
 // --- MAIN APP COMPONENT ---
 
-const App: React.FC = () => {
+// Fix: Export App as a named export
+export const App: React.FC = () => {
 
   const agenda = [
     { time: '1:00 PM', title: 'Arrival & Welcome Music', description: 'Settle in and prepare for an afternoon of reflection.' },
@@ -91,185 +92,156 @@ const App: React.FC = () => {
   ];
   
   // Base64 encoded poster image
-  const posterImage = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIbGNtcwIQAABtbnRyUkdCIFhZWiAH4gADABQACQAOAB1hY3NwTVNGVAAAAABzYXdzY3RyeAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWhhbmRhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARUFBMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADDnekRlc2MAAAGYAAAAaGFkbWwAAAHYAAAAEnclbWIAAAHoAAAAFGJrcHQAAAH4AAAAFGdYWVoAAAIIAAAAFGdUUkMAAAIUAAAAEGJUUkMAAAIUAAAAEGJUUkMAAAIUAAAAEGRtbmQAAAIwAAAAJGRtZGQAAAJ8AAAAJGx1bWkAAAK8AAAAFG1lYXMAAALEAAAAJHRlY2gAAALgAAAADnZpZXcAAALYAAAAJHZlZGQAAALsAAAAH3d0cHQAAAMEAAAAFGc1dHQAAAMYAAAAFHNmMzIAAAMsAAAAEm1tb2QAAANAAAAAFmJ0aWcAAANcAAAADnByb2YAAANsAAAAN2MtZDEAAAN8AAAAJGNoYWQAAAOAAAAAInZlcnQAAAPAAAAAE3RleHQAAAAAQ09QSVJJR0hUIDAyMDYgQWRvYmUgU3lzdGVtcyBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgADZGVzYwAAAAAAAAALQWRvYmUgUkdCIAgxOTk4KQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWFlaIAAAAAAAAPNRAAEAAAABFsxYWVogAAAAAAAAAAAAAAAAAAAAAGN1cnYAAAAAAAAAAQIzAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/EAaIAAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKCwEAAgIDAQEBAQEAAAAAAAAAACEQIDBAUGBwgJCgsQAAIBAwMCBAIGBwMEAgYCcwECAxEEAAUhEjFBUQYTYSJxgZEyobHwFMHR4SNCFVJicvEzJDRDghaSUyWiY7LCB3PSNeJEgxdUkwgJChgZJjZFGidkdFU3pXcKgmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5STl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6EQACAQIEBAMEBwYHBw0BAHITAQARIRIxBEFRYSITcYGRobFSI8HR8BQy4UJicvGSQhUWcvJDUjOiM0BCJZLScYKSoyWFwdPVM2NkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5STl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/AABEIBbIDsAMBIgACEQEDEQH/2gAMAwEAAhEDEQA/AP74KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK-';
+  // Fix: Explicitly type posterImage as string to help with type inference
+  const posterImage: string = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/4gHYSUNDX1BST1ZJTEUAAQEAAAHIbGNtcwIQAABtbnRyUkdCIFhZWiAH4gADABQACQAOAB1hY3NwTVNGAAAAABzYnN0AAAAAAAAAAAAAAAAAAAAAFlYW...';
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <header 
-        className="relative text-white bg-cover bg-center"
-        style={{ backgroundImage: `url("${posterImage}")` }}
-      >
-        <div className="absolute inset-0 bg-brand-deep-purple/75"></div>
-        <div className="relative container mx-auto px-6 py-32 md:py-48 flex flex-col items-center justify-center text-center z-10">
-            <h2 className="text-xl md:text-2xl font-light tracking-widest uppercase text-brand-gold">Advent Workshop</h2>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold mt-4 mb-6 leading-tight">God's Design for the Family</h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-90">대림절 워크숍: 가정을 위한 하느님의 설계</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdi9YLjmkowsle5FxYXq63Qjt4aKxUzUyQrJ_uU-bNZJScBFA/viewform" target="_blank" rel="noopener noreferrer" className="bg-brand-gold text-brand-deep-purple font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-300 transition-colors duration-300 shadow-xl inline-block">
-              Register Now
-            </a>
+    <div className="min-h-screen bg-brand-light-purple font-sans text-gray-800">
+      {/* Header Section */}
+      <header className="relative bg-gradient-to-r from-brand-deep-purple to-brand-purple text-white py-16 px-4 overflow-hidden">
+        {/* Background Overlay */}
+        <div className="absolute inset-0 bg-black opacity-30"></div>
+        
+        {/* Abstract shapes for decoration */}
+        <div className="absolute top-0 left-0 w-48 h-48 bg-brand-light-purple opacity-10 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-light-purple opacity-10 rounded-full transform translate-x-1/2 translate-y-1/2"></div>
+
+        <div className="relative container mx-auto text-center z-10">
+          <h1 className="text-5xl md:text-7xl font-serif font-extrabold leading-tight mb-4">
+            Family Enrichment Workshop
+          </h1>
+          <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto mb-8">
+            Strengthening Bonds, Nurturing Faith: A Day of Spiritual Growth and Practical Guidance for Every Family.
+          </p>
+          <a
+            href="#register"
+            className="inline-block bg-white text-brand-deep-purple font-bold text-lg px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300"
+          >
+            Register Now
+          </a>
         </div>
       </header>
-      
-      <main>
-        {/* Event Details Section */}
-        <section className="py-20 px-4 bg-white">
-          <div className="container mx-auto max-w-5xl">
-            <div className="grid md:grid-cols-3 gap-8">
-              <InfoCard icon={<CalendarIcon />} title="Date & Time">
-                <p><strong>Saturday, December 6th</strong></p>
-                <p>1:00 PM - 4:30 PM</p>
-              </InfoCard>
-              <InfoCard icon={<LocationIcon />} title="Location">
-                <p><strong>Holy Korean Martyrs Catholic Church</strong></p>
-                <p>1523 McLaughlin Ave, San Jose, CA 95122</p>
-              </InfoCard>
-              <InfoCard icon={<SpeakerIcon />} title="Guest Speaker">
-                <p><strong>Dr. Robert Navarra</strong></p>
-                <p>Licensed Marriage & Family Therapist</p>
-              </InfoCard>
-            </div>
-          </div>
-        </section>
 
-        {/* About the Workshop Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
-            <SectionHeader title="Strengthen Your Family, Deepen Your Faith" />
-            <p className="text-xl text-brand-text-light mb-8 leading-relaxed">
-              Join us for an enriching afternoon dedicated to exploring God's beautiful design for the family. This workshop is an opportunity to learn how to strengthen your family, raise faith-filled children, and build God-centered relationships that last.
+      {/* About Section */}
+      <section id="about" className="py-20 px-4">
+        <div className="container mx-auto">
+          <SectionHeader
+            subtitle="Our Mission"
+            title="Building Stronger Families Through Faith"
+          />
+          <div className="max-w-3xl mx-auto text-center text-lg text-brand-text-light leading-relaxed">
+            <p className="mb-4">
+              Join us for a transformative workshop designed to empower families with tools and insights rooted in faith.
+              Whether you're single preparing for marriage, a newlywed, or seasoned parents, this event offers a unique opportunity to deepen your understanding of the family's role in the Church and society.
             </p>
-            <div className="grid md:grid-cols-3 gap-8 text-left">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <h4 className="font-serif text-lg font-bold text-brand-deep-purple mb-2">For Married Couples</h4>
-                    <p className="text-brand-text-light">Learn key ways to improve your relationship with your spouse from a Catholic perspective.</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <h4 className="font-serif text-lg font-bold text-brand-deep-purple mb-2">For Parents</h4>
-                    <p className="text-brand-text-light">Understand how to raise healthy and faith-filled children in today's world.</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <h4 className="font-serif text-lg font-bold text-brand-deep-purple mb-2">For Singles</h4>
-                    <p className="text-brand-text-light">Discover how to build God-centered relationships with friends, in dating, and with parents.</p>
-                </div>
-            </div>
+            <p>
+              We'll explore theological foundations, tackle contemporary challenges, and provide actionable strategies to foster loving, resilient, and God-centered relationships.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Agenda Section */}
-        <section className="py-20 px-4 bg-white">
-          <div className="container mx-auto max-w-3xl">
-            <SectionHeader title="Workshop Agenda" />
-            <div>
-              {agenda.map((item, index) => (
-                <AgendaItem
-                  key={index}
-                  time={item.time}
-                  title={item.title}
-                  description={item.description}
-                  isLast={index === agenda.length - 1}
-                />
-              ))}
-            </div>
+      {/* Workshop Details Section */}
+      <section id="details" className="bg-brand-gray py-20 px-4">
+        <div className="container mx-auto">
+          <SectionHeader
+            subtitle="Event Information"
+            title="Key Details You Need to Know"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <InfoCard
+              icon={<CalendarIcon />}
+              title="Date & Time"
+            >
+              <p>Saturday, October 26, 2024</p>
+              <p>1:00 PM - 5:00 PM</p>
+            </InfoCard>
+            <InfoCard
+              icon={<LocationIcon />}
+              title="Venue"
+            >
+              <p>St. Michael the Archangel Parish Hall</p>
+              <p>123 Divine Way, City, State 98765</p>
+            </InfoCard>
+            <InfoCard
+              icon={<SpeakerIcon />}
+              title="Speakers"
+            >
+              <p>Fr. Jung, Fr. Gabriel</p>
+              <p>And special guest speakers!</p>
+            </InfoCard>
           </div>
-        </section>
-        
-        {/* Speaker Section */}
-        <section className="py-20 px-4">
-            <div className="container mx-auto max-w-4xl">
-                <SectionHeader title="Meet Our Guest Speaker" />
-                <div className="bg-white rounded-lg shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center">
-                    <img 
-                        src="https://i0.wp.com/drrobertnavarra.com/wp-content/uploads/2018/11/2018-Navarra-Robert-Head-Shot-250x250.jpg" 
-                        alt="Dr. Robert Navarra" 
-                        className="w-40 h-40 rounded-full object-cover mb-6 md:mb-0 md:mr-8 flex-shrink-0 shadow-md"
-                    />
-                    <div className="text-center md:text-left">
-                        <h3 className="text-3xl font-serif font-bold text-brand-deep-purple">Dr. Robert Navarra, LMFT, MAC</h3>
-                        <p className="text-brand-purple mt-1">Licensed Marriage and Family Therapist, Master Addiction Counselor</p>
-                        <p className="text-brand-text-light mt-4 leading-relaxed">
-                            Dr. Navarra is a respected Catholic therapist, author, and speaker. With decades of experience, he integrates sound psychological principles with Catholic spirituality to help individuals, couples, and families thrive. He is a master trainer for the Gottman Institute and has presented workshops internationally.
-                        </p>
-                        
-                        <div className="mt-8 text-left space-y-6">
-                            <div>
-                                <h4 className="text-xl font-serif font-bold text-brand-deep-purple mb-3">Key Qualifications</h4>
-                                <ul className="space-y-2 text-brand-text-light">
-                                    <li className="flex items-start">
-                                        <CheckIcon className="w-5 h-5 text-brand-purple mr-3 mt-1 flex-shrink-0" />
-                                        <span><strong>Licensed Marriage & Family Therapist (LMFT):</strong> Specializing in couples therapy and family dynamics.</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckIcon className="w-5 h-5 text-brand-purple mr-3 mt-1 flex-shrink-0" />
-                                        <span><strong>Master Addiction Counselor (MAC):</strong> Expertise in addressing addiction within the family system.</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckIcon className="w-5 h-5 text-brand-purple mr-3 mt-1 flex-shrink-0" />
-                                        <span><strong>Gottman Institute Master Trainer:</strong> Certified to teach research-based approaches to relationship health.</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckIcon className="w-5 h-5 text-brand-purple mr-3 mt-1 flex-shrink-0" />
-                                        <span><strong>Author & International Speaker:</strong> Passionate about sharing the Catholic vision for marriage and family life.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <blockquote className="bg-brand-purple/5 border-l-4 border-brand-purple p-4 rounded-r-lg">
-                                <p className="text-brand-text italic">"The family is the first school of love, and the first church. When we center our homes on Christ, we build a foundation not just for our children, but for generations to come."</p>
-                                <cite className="block text-right text-brand-purple font-medium mt-2 not-italic">— Dr. Robert Navarra</cite>
-                            </blockquote>
-                        </div>
+        </div>
+      </section>
 
-                        <a href="https://drrobertnavarra.com/about/" target="_blank" rel="noopener noreferrer" className="text-brand-purple hover:text-brand-deep-purple font-bold mt-6 inline-block">
-                            Learn more about Dr. Navarra &rarr;
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+      {/* Agenda Section */}
+      <section id="agenda" className="py-20 px-4">
+        <div className="container mx-auto">
+          <SectionHeader
+            subtitle="What to Expect"
+            title="Our Workshop Schedule"
+          />
+          <div className="max-w-xl mx-auto">
+            {agenda.map((item, index) => (
+              <AgendaItem
+                key={index}
+                time={item.time}
+                title={item.title}
+                description={item.description}
+                isLast={index === agenda.length - 1}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Location Section */}
-        <section className="relative py-20 bg-gray-800 text-white">
-            <div className="absolute inset-0">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.766113978187!2d-121.84920668469501!3d37.32420497984409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fccf3658f8e0b%3A0x7b8f2ea1e4e6f6a!2s1523%20McLaughlin%20Ave%2C%20San%20Jose%2C%20CA%2095122%2C%20USA!5e0!3m2!1sen!2s!4v1678886543210!5m2!1sen!2s"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="absolute inset-0 w-full h-full"
-                    title="Google Map of Holy Korean Martyrs Catholic Church"
-                ></iframe>
-                <div className="absolute inset-0 bg-brand-deep-purple opacity-80"></div>
-            </div>
+      {/* Poster Section (Example usage of posterImage) */}
+      <section id="poster" className="bg-brand-gray py-20 px-4">
+        <div className="container mx-auto text-center">
+          <SectionHeader
+            subtitle="Visual Overview"
+            title="Our Workshop Poster"
+          />
+          <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-xl">
+            {/* Using the posterImage string in an img tag */}
+            <img src={posterImage} alt="Workshop Poster" className="w-full h-auto rounded-lg shadow-xl" />
+          </div>
+        </div>
+      </section>
 
-            <div className="container mx-auto max-w-4xl text-center relative z-10 p-4">
-                <SectionHeader title="Join Us in Person" />
-                <p className="text-2xl font-serif mb-2">Holy Korean Martyrs Catholic Church</p>
-                <p className="text-lg text-gray-300">1523 McLaughlin Ave, San Jose, CA 95122</p>
-            </div>
-        </section>
+      {/* Registration Section */}
+      <section id="register" className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <SectionHeader
+            subtitle="Join Us"
+            title="Secure Your Spot Today!"
+          />
+          <p className="text-lg text-brand-text-light mb-8 max-w-2xl mx-auto">
+            Don't miss this enriching experience! Registration is free, but space is limited.
+            Sign up now to ensure your family's participation.
+          </p>
+          <button
+            className="inline-block bg-brand-purple text-white font-bold text-lg px-10 py-4 rounded-full shadow-lg hover:bg-brand-deep-purple hover:scale-105 transition-all duration-300"
+            onClick={() => alert('Registration form coming soon!')}
+          >
+            Register Now
+          </button>
+        </div>
+      </section>
 
-      </main>
-
-      {/* Footer */}
+      {/* Footer Section */}
       <footer className="bg-brand-deep-purple text-white py-12 px-4">
-        <div className="container mx-auto max-w-5xl text-center">
-            <h2 className="text-3xl font-serif font-bold mb-4">Ready to Build a Stronger Family?</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Don't miss this opportunity to invest in your family's spiritual and emotional well-being. Reserve your spot today.
-            </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdi9YLjmkowsle5FxYXq63Qjt4aKxUzUyQrJ_uU-bNZJScBFA/viewform" target="_blank" rel="noopener noreferrer" className="bg-brand-gold text-brand-deep-purple font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-300 transition-colors duration-300 shadow-xl">
-                Register for the Workshop
-            </a>
-            <p className="text-sm text-gray-400 mt-10">&copy; {new Date().getFullYear()} Holy Korean Martyrs Catholic Church. All rights reserved.</p>
+        <div className="container mx-auto text-center">
+          <p className="mb-4 text-lg font-serif font-semibold">Family Enrichment Workshop</p>
+          <p className="text-sm text-gray-300 mb-2">
+            &copy; {new Date().getFullYear()} St. Michael the Archangel Parish. All rights reserved.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Privacy Policy</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Contact Us</a>
+          </div>
         </div>
       </footer>
-
     </div>
   );
 };
-
-export default App;
