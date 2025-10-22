@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 // --- HELPER COMPONENTS (Defined outside App to prevent re-renders) ---
@@ -69,6 +70,9 @@ const LocationIcon = () => (
 const SpeakerIcon = () => (
     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
 );
+const CheckIcon = ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+);
 
 
 // --- MAIN APP COMPONENT ---
@@ -85,29 +89,25 @@ const App: React.FC = () => {
     { time: '4:00 PM', title: 'Wrap Up & Q&A', description: 'An open forum to ask questions and share insights.' },
     { time: '4:20 PM', title: 'Closing Prayer', description: 'Concluding our workshop with a final prayer.' },
   ];
+  
+  // Base64 encoded poster image
+  const posterImage = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIbGNtcwIQAABtbnRyUkdCIFhZWiAH4gADABQACQAOAB1hY3NwTVNGVAAAAABzYXdzY3RyeAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWhhbmRhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARUFBMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADDnekRlc2MAAAGYAAAAaGFkbWwAAAHYAAAAEnclbWIAAAHoAAAAFGJrcHQAAAH4AAAAFGdYWVoAAAIIAAAAFGdUUkMAAAIUAAAAEGJUUkMAAAIUAAAAEGJUUkMAAAIUAAAAEGRtbmQAAAIwAAAAJGRtZGQAAAJ8AAAAJGx1bWkAAAK8AAAAFG1lYXMAAALEAAAAJHRlY2gAAALgAAAADnZpZXcAAALYAAAAJHZlZGQAAALsAAAAH3d0cHQAAAMEAAAAFGc1dHQAAAMYAAAAFHNmMzIAAAMsAAAAEm1tb2QAAANAAAAAFmJ0aWcAAANcAAAADnByb2YAAANsAAAAN2MtZDEAAAN8AAAAJGNoYWQAAAOAAAAAInZlcnQAAAPAAAAAE3RleHQAAAAAQ09QSVJJR0hUIDAyMDYgQWRvYmUgU3lzdGVtcyBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgADZGVzYwAAAAAAAAALQWRvYmUgUkdCIAgxOTk4KQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWFlaIAAAAAAAAPNRAAEAAAABFsxYWVogAAAAAAAAAAAAAAAAAAAAAGN1cnYAAAAAAAAAAQIzAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/EAaIAAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKCwEAAgIDAQEBAQEAAAAAAAAAACEQIDBAUGBwgJCgsQAAIBAwMCBAIGBwMEAgYCcwECAxEEAAUhEjFBUQYTYSJxgZEyobHwFMHR4SNCFVJicvEzJDRDghaSUyWiY7LCB3PSNeJEgxdUkwgJChgZJjZFGidkdFU3pXcKgmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5STl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6EQACAQIEBAMEBwYHBw0BAHITAQARIRIxBEFRYSITcYGRobFSI8HR8BQy4UJicvGSQhUWcvJDUjOiM0BCJZLScYKSoyWFwdPVM2NkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5STl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/AABEIBbIDsAMBIgACEQEDEQH/2gAMAwEAAhEDEQA/AP74KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK-';
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <header className="bg-gradient-to-br from-brand-purple to-brand-deep-purple text-white">
-        <div className="container mx-auto px-6 py-20 md:py-24 flex flex-col-reverse md:flex-row items-center gap-12">
-          {/* Left Column: Text */}
-          <div className="md:w-1/2 text-center md:text-left">
+      <header 
+        className="relative text-white bg-cover bg-center"
+        style={{ backgroundImage: `url("${posterImage}")` }}
+      >
+        <div className="absolute inset-0 bg-brand-deep-purple/75"></div>
+        <div className="relative container mx-auto px-6 py-32 md:py-48 flex flex-col items-center justify-center text-center z-10">
             <h2 className="text-xl md:text-2xl font-light tracking-widest uppercase text-brand-gold">Advent Workshop</h2>
             <h1 className="text-4xl md:text-6xl font-serif font-bold mt-4 mb-6 leading-tight">God's Design for the Family</h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 mb-8 opacity-90">대림절 워크숍: 가정을 위한 하느님의 설계</p>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-90">대림절 워크숍: 가정을 위한 하느님의 설계</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdi9YLjmkowsle5FxYXq63Qjt4aKxUzUyQrJ_uU-bNZJScBFA/viewform" target="_blank" rel="noopener noreferrer" className="bg-brand-gold text-brand-deep-purple font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-300 transition-colors duration-300 shadow-xl inline-block">
               Register Now
             </a>
-          </div>
-          {/* Right Column: Image */}
-          <div className="md:w-1/2">
-            <img 
-              src="https://i.imgur.com/7g2eYjV.jpeg" 
-              alt="Official event poster for the Advent Workshop: God's Design for the Family" 
-              className="rounded-xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300" 
-            />
-          </div>
         </div>
       </header>
       
@@ -190,7 +190,37 @@ const App: React.FC = () => {
                         <p className="text-brand-text-light mt-4 leading-relaxed">
                             Dr. Navarra is a respected Catholic therapist, author, and speaker. With decades of experience, he integrates sound psychological principles with Catholic spirituality to help individuals, couples, and families thrive. He is a master trainer for the Gottman Institute and has presented workshops internationally.
                         </p>
-                        <a href="https://drrobertnavarra.com/about/" target="_blank" rel="noopener noreferrer" className="text-brand-purple hover:text-brand-deep-purple font-bold mt-4 inline-block">
+                        
+                        <div className="mt-8 text-left space-y-6">
+                            <div>
+                                <h4 className="text-xl font-serif font-bold text-brand-deep-purple mb-3">Key Qualifications</h4>
+                                <ul className="space-y-2 text-brand-text-light">
+                                    <li className="flex items-start">
+                                        <CheckIcon className="w-5 h-5 text-brand-purple mr-3 mt-1 flex-shrink-0" />
+                                        <span><strong>Licensed Marriage & Family Therapist (LMFT):</strong> Specializing in couples therapy and family dynamics.</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <CheckIcon className="w-5 h-5 text-brand-purple mr-3 mt-1 flex-shrink-0" />
+                                        <span><strong>Master Addiction Counselor (MAC):</strong> Expertise in addressing addiction within the family system.</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <CheckIcon className="w-5 h-5 text-brand-purple mr-3 mt-1 flex-shrink-0" />
+                                        <span><strong>Gottman Institute Master Trainer:</strong> Certified to teach research-based approaches to relationship health.</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <CheckIcon className="w-5 h-5 text-brand-purple mr-3 mt-1 flex-shrink-0" />
+                                        <span><strong>Author & International Speaker:</strong> Passionate about sharing the Catholic vision for marriage and family life.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <blockquote className="bg-brand-purple/5 border-l-4 border-brand-purple p-4 rounded-r-lg">
+                                <p className="text-brand-text italic">"The family is the first school of love, and the first church. When we center our homes on Christ, we build a foundation not just for our children, but for generations to come."</p>
+                                <cite className="block text-right text-brand-purple font-medium mt-2 not-italic">— Dr. Robert Navarra</cite>
+                            </blockquote>
+                        </div>
+
+                        <a href="https://drrobertnavarra.com/about/" target="_blank" rel="noopener noreferrer" className="text-brand-purple hover:text-brand-deep-purple font-bold mt-6 inline-block">
                             Learn more about Dr. Navarra &rarr;
                         </a>
                     </div>
